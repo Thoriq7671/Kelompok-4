@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      SWMS <br/> Smart Waste Management System
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-img src ="../assets/logoswms.png" alt="logo"></ion-img>
+  <ion-card>
+  <ion-item>
+    <ion-label position="stacked">Nama Pengguna</ion-label>
+    <ion-input  placeholder="Masukan nama pengguna" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Kata Sandi</ion-label>
+    <ion-input  type="password"placeholder="Masukan kata sandi" ></ion-input>
+  </ion-item>
+
+  <p text-right no-lines>
+  <a class="anchorColor" >Lupa Kata Sandi?</a>
+  </p>
+
+  <button ion-button shape = round size= small expand="full" (click)="doLogin()">Masuk</button>
+
+  <p text-left no-lines>
+      <a class="anchorColor" (click)="doSignup()">Buat Akun</a>
+  </p>
+  </ion-card>
+
+</ion-content>

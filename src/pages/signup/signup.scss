@@ -1,0 +1,13 @@
+page-signup {
+    ion-content {
+        background-image: url("/src/assets/logoswms.png");
+        background-size: cover;
+        text-align: center;
+        background-color : --ion-color-primary;
+        padding: 10px;
+    }
+    img{
+        margin-top: 0px;
+        width: 200px;
+    }
+}
