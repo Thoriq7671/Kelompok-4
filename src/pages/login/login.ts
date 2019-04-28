@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
+import { SignupPage } from '../signup/signup';
 
 /**
  * Generated class for the LoginPage page.
@@ -19,11 +21,11 @@ export class LoginPage {
   }
 
   doSignup() {
-    this.navCtrl.setRoot('SignupPage');
+    this.navCtrl.push(SignupPage);
   }
 
   doLogin(){
-    this.navCtrl.setRoot('HomePage');
+    this.navCtrl.setRoot(HomePage);
   }
 
   ionViewDidLoad() {

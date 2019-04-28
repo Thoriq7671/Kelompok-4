@@ -2,13 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
-//import { SignupPage } from '../pages/signup/signup';
-//import { HomePage } from '../pages/home/home';
+import { SignupPage } from '../pages/signup/signup';
+import { HomePage } from '../pages/home/home';
 import { Tab1Page } from '../pages/tab1/tab1';
 import { Tab2Page } from '../pages/tab2/tab2';
 import { SpecialPage } from '../pages/special/special';
@@ -26,8 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ItemDetailsPage,
     ListPage,
     LoginPage,
-    //SignupPage,
-    //HomePage,
+    SignupPage,
+    HomePage,
     Tab1Page,
     Tab2Page,
     SpecialPage,
@@ -46,8 +47,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ItemDetailsPage,
     ListPage,
     LoginPage,
-    //SignupPage,
-    //HomePage,
+    SignupPage,
+    HomePage,
     Tab1Page,
     Tab2Page,
     SpecialPage,

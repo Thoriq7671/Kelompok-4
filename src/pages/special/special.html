@@ -6,15 +6,20 @@
 -->
 <ion-header>
   <ion-navbar>
-      <ion-buttons start>
-          <button ion-button menuToggle>
-              <ion-icon name="menu"></ion-icon>
-          </button>
-        </ion-buttons>
-    <ion-title>special</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>SWMS</ion-title>
+    <ion-title>Pengaturan</ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-halow
+  <ion-list>
+    <button ion-item> Akun Saya</button> 
+    <button ion-item> Kebijakan Lisensi</button>   
+    <button ion-item> Bantuan</button>  
+    <button ion-item (click)="doSignout()"> Keluar</button> 
+  </ion-list>
 </ion-content>

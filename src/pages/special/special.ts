@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the SpecialPage page.
@@ -14,8 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'special.html',
 })
 export class SpecialPage {
+  
+
+  itemSelected(item: string) {
+    console.log("Selected Item", item);
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  doSignout(){
+    this.navCtrl.setRoot(LoginPage);
   }
 
   ionViewDidLoad() {

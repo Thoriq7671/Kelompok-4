@@ -6,10 +6,10 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 // import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 //import { SignupPage } from '../pages/signup/signup';
-import { HomePage } from '../pages/home/home';
+//import { HomePage } from '../pages/home/home';
 import { Tab1Page } from '../pages/tab1/tab1';
 import { Tab2Page } from '../pages/tab2/tab2';
-//import { SpecialPage } from '../pages/special/special';
+import { SpecialPage } from '../pages/special/special';
 //import { Done1Page } from '../pages/done1/done1';
 //import { Done2Page } from '../pages/done2/done2';
 
@@ -42,7 +42,7 @@ export class MyApp {
     this.pages = [
       { title: 'Lapor Sampah', component: Tab1Page },
       { title: 'Panggil Petugas', component: Tab2Page },
-      { title: 'coba', component: HomePage }
+      { title: 'Pengaturan', component: SpecialPage }
     ];
   }
 
