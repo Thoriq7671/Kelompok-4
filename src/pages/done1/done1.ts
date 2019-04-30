@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
+import { Tab1Page } from '../tab1/tab1';
 
 /**
  * Generated class for the Done1Page page.
@@ -20,6 +22,14 @@ export class Done1Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Done1Page');
+  }
+
+  doBack(){
+    this.navCtrl.setRoot(HomePage);
+  }
+
+  doBackk(){
+    this.navCtrl.setRoot(Tab1Page);
   }
 
 }

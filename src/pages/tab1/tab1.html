@@ -21,9 +21,49 @@
         </ion-item>
       </ion-list>
       
+   
+      <ion-item>
+        <ion-icon name="pin" item-left></ion-icon>
+        <ion-label color="primary" stacked> Lokasi yang dilaporkan</ion-label>
+    </ion-item>
     <ion-toolbar color="primary">
         <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
-      </ion-toolbar>
-        
-  <div id='map'></div>
+    </ion-toolbar>   
+    <div id='map'></div>
+     
+    <ion-infinite-scroll threshold="100px" id="infinite-scroll"></ion-infinite-scroll>
+      <ion-item> 
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label color="primary" stacked> Nama</ion-label>
+        <ion-input type="name" placeholder="Masukan nama"></ion-input>
+      </ion-item>
+   
+      <ion-item>
+          <ion-icon name="call" item-left></ion-icon>
+          <ion-label color="primary" stacked> Nomor telepon</ion-label>
+          <ion-input type="call" placeholder="Masukan nomor telepon"></ion-input>
+        </ion-item>
+
+       
+
+          <ion-item>
+              <ion-icon name="information-circle" item-left></ion-icon>
+              <ion-label color="primary" stacked> Keterangan</ion-label>
+              <ion-input type="locate" placeholder="Masukan keterangan"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="camera" item-left></ion-icon>
+                <ion-label color="primary" stacked> Foto (opsional)</ion-label>
+                <ion-input type="image" placeholder="Masukan gambar"></ion-input>
+              </ion-item>
+
+            
+            <ion-grid>
+              <ion-row>
+                <ion-col style="text-align: center"><button ion-button (click)="doLapor()">Lapor</button></ion-col>
+              </ion-row>
+            </ion-grid>
+                
+
 </ion-content>

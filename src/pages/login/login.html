@@ -19,6 +19,16 @@
     <ion-input  type="password"placeholder="Masukan kata sandi" ></ion-input>
   </ion-item>
 
+  <ion-list>
+    <ion-item>
+      <ion-label color = "primary">Masuk Sebagai</ion-label>
+      <ion-select [(ngModel)]="signinas">
+        <ion-option value="pelapor">Pelapor</ion-option>
+        <ion-option value="petugas">Petugas</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
   <p text-right no-lines>
   <a class="anchorColor" >Lupa Kata Sandi?</a>
   </p>
