@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+//import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 

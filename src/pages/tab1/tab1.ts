@@ -1,5 +1,9 @@
-import { Component, NgZone } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LaporItem } from '../../models/lapor-sampah/lapor-sampah.interface';
+import { AngularFireDatabase, FirebaseListObservable  } from 'angularfire2/database';
+
+//import { database } from 'firebase';
 
 /**
  * Generated class for the Tab1Page page.
@@ -14,25 +18,41 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'tab1.html',
 })
 export class Tab1Page {
-  navCtrl: any;
-  // map: any;
+  //creating new object
+  laporItem = {} as LaporItem
+
+  laporItemRef$: FirebaseListObservable<LaporItem[]>
+
+  //navCtrl: any;
+  //map: any;
   // GoogleAutocomplete: google.maps.places.AutocompleteService;
   // autocomplete: { input: string; };
   // autocompleteItems: any[];
 
-  // constructor(public navCtrl: NavController, public navParams: NavParams, private zone: NgZone) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  private database: AngularFireDatabase) {
   //   this.GoogleAutocomplete = new google.maps.places.AutocompleteService();
   //   this.autocomplete = { input: '' };
   //   this.autocompleteItems = [];
-  // }
+  this.laporItemRef$ = this.database.list('daftarlapor');
+   }
 
-  doLapor(){
+  doLapor(laporItem: LaporItem){
+    this.laporItemRef$.push({
+      Nama: this.laporItem.Nama,
+      Phone: this.laporItem.Phone,
+      Lokasi: this.laporItem.Lokasi,
+      Keterangan: this.laporItem.Keterangan
+    });
+    //console.log(laporItem);
+    this.laporItem = {} as LaporItem;
     this.navCtrl.setRoot('Done1Page');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Tab1Page');
-  }
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad Tab1Page');
+  // }
+
+ 
 
   // ionViewDidEnter(){
   //   //Set latitude and longitude of some place

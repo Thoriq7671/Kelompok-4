@@ -3,6 +3,11 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { FIREBASE_CREDENTIALS } from './firebase.credentials';
+
 //import { Geolocation } from '@ionic-native/geolocation';
 
 
@@ -18,9 +23,22 @@ import { SpecialPage } from '../pages/special/special';
 import { TabsPage } from '../pages/tabs/tabs';
 //import { Done1Page } from '../pages/done1/done1';
 //import { Done2Page } from '../pages/done2/done2';
+import { DaftarlaporPage } from '../pages/daftarlapor/daftarlapor';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PengaturanPage } from '../pages/pengaturan/pengaturan';
+
+
+// const firebaseAuth = {
+//   apiKey: "AIzaSyBs0IMZvD4iPdh7fiAocL3KlFRgBp1xcwM",
+//   authDomain: "swms-1556079497175.firebaseapp.com",
+//   databaseURL: "https://swms-1556079497175.firebaseio.com",
+//   projectId: "swms-1556079497175",
+//   storageBucket: "",
+//   messagingSenderId: "810902154105"
+// };
+
 
 @NgModule({
   declarations: [
@@ -36,12 +54,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SpecialPage,
     TabsPage,
     //Done1Page,
-    //Done2Page
+    //Done2Page,
+    DaftarlaporPage,
+    PengaturanPage,
+
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,7 +81,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SpecialPage,
     TabsPage,
     //Done1Page,
-    //Done2Page
+    //Done2Page,
+    DaftarlaporPage,
+    PengaturanPage
   ],
   providers: [
     StatusBar,

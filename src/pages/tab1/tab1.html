@@ -22,10 +22,7 @@
       </ion-list> -->
       
    
-      <ion-item>
-        <ion-icon name="pin" item-left></ion-icon>
-        <ion-label color="primary" stacked> Lokasi yang dilaporkan</ion-label>
-    </ion-item>
+     
     <!-- <ion-toolbar color="primary">
         <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
     </ion-toolbar>   
@@ -35,33 +32,37 @@
       <ion-item> 
         <ion-icon name="person" item-left></ion-icon>
         <ion-label color="primary" stacked> Nama</ion-label>
-        <ion-input type="name" placeholder="Masukan nama"></ion-input>
+        <ion-input type="text" placeholder="Masukan nama" [(ngModel)]="laporItem.Nama"></ion-input>
       </ion-item>
    
       <ion-item>
           <ion-icon name="call" item-left></ion-icon>
           <ion-label color="primary" stacked> Nomor telepon</ion-label>
-          <ion-input type="call" placeholder="Masukan nomor telepon"></ion-input>
+          <ion-input type="text" placeholder="Masukan nomor telepon" [(ngModel)]="laporItem.Phone"></ion-input>
         </ion-item>
 
-       
+        <ion-item>
+          <ion-icon name="pin" item-left></ion-icon>
+          <ion-label color="primary" stacked> Lokasi yang dilaporkan</ion-label>
+          <ion-input type="text" placeholder="Masukan lokasi yang dilaporkan" [(ngModel)]="laporItem.Lokasi"></ion-input>
+      </ion-item>
 
           <ion-item>
               <ion-icon name="information-circle" item-left></ion-icon>
               <ion-label color="primary" stacked> Keterangan</ion-label>
-              <ion-input type="locate" placeholder="Masukan keterangan"></ion-input>
+              <ion-input type="text" placeholder="Masukan keterangan"  [(ngModel)]="laporItem.Keterangan"></ion-input>
             </ion-item>
 
-            <ion-item>
+            <!-- <ion-item>
                 <ion-icon name="camera" item-left></ion-icon>
                 <ion-label color="primary" stacked> Foto (opsional)</ion-label>
                 <ion-input type="image" placeholder="Masukan gambar"></ion-input>
-              </ion-item>
+              </ion-item> -->
 
             
             <ion-grid>
               <ion-row>
-                <ion-col style="text-align: center"><button ion-button (click)="doLapor()">Lapor</button></ion-col>
+                <ion-col style="text-align: center"><button ion-button (click)="doLapor(laporItem)">Lapor</button></ion-col>
               </ion-row>
             </ion-grid>
                 

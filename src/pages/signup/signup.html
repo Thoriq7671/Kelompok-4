@@ -17,7 +17,7 @@
  <img src ="../assets/logoswms.png"/>
   <ion-infinite-scroll threshold="100px" id="infinite-scroll"></ion-infinite-scroll>
   <ion-card>
-<ion-item>
+<!-- <ion-item>
   <ion-label color = "primary" position="stacked">Nama</ion-label>
   <ion-input  placeholder="Masukan nama" ></ion-input>
 </ion-item>
@@ -30,23 +30,23 @@
 <ion-item>
       <ion-label color = "primary" position="stacked">Nomor Telepon</ion-label>
       <ion-input  placeholder="Masukan nomor telepon" ></ion-input>
-  </ion-item>
+  </ion-item> -->
 
   <ion-item>
-      <ion-label color = "primary" position="stacked">Nama Pengguna</ion-label>
-      <ion-input  placeholder="Masukan nama pengguna" ></ion-input>
+      <ion-label color = "primary" position="stacked">Email</ion-label>
+      <ion-input placeholder="Masukan email" type="text"  #username></ion-input>
     </ion-item>
 
 <ion-item>
   <ion-label color = "primary" position="stacked">Kata Sandi</ion-label>
-  <ion-input  type="password"placeholder="Masukan kata sandi" ></ion-input>
+  <ion-input placeholder="Masukan kata sandi" type="password" #password></ion-input>
 </ion-item>
-
+<!-- 
 <ion-item>
     <ion-label color = "primary" position="stacked">Konfirmasi Kata Sandi</ion-label>
     <ion-input  type="password"placeholder="Konfirmasi kata sandi" ></ion-input>
-  </ion-item>
+  </ion-item> -->
 
-  <button ion-button shape = round size= small expand="full" (click)="doLogin()">Masuk</button>
+  <button block ion-button shape = round size= small expand="full" (click)="doLogin()">Masuk</button>
 </ion-card>
 </ion-content>
