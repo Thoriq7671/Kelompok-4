@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      SWMS <br/> Smart Waste Management System
+     Smart Waste Management System
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding class="bg-image" >
     <img src ="../assets/logoswms.png"/>
   <ion-infinite-scroll threshold="100px" id="infinite-scroll"></ion-infinite-scroll>
-  <ion-card>
+  
   <ion-item>
     <ion-label color = "primary" position="stacked">Email</ion-label>
     <ion-input  placeholder="Masukan nama pengguna" #username ></ion-input>
@@ -24,21 +24,21 @@
     <ion-item>
       <ion-label color = "primary">Masuk Sebagai</ion-label>
       <ion-select [(ngModel)]="signinas">
-        <ion-option value="pelapor">Pelapor</ion-option>
-        <ion-option value="petugas">Petugas</ion-option>
+        <ion-option value="pelapor" >Pelapor</ion-option>
+        <ion-option  #petugas>Petugas</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
 
-  <p text-right no-lines>
+  <!-- <p text-right no-lines>
   <a class="anchorColor" >Lupa Kata Sandi?</a>
-  </p>
+  </p> -->
 
   <button block ion-button shape = round size= small expand="full" (click)="doLogin()">Masuk</button>
 
   <p text-left no-lines>
-      <a class="anchorColor" (click)="doSignup()">Buat Akun</a>
+      <a  class="anchorColor" (click)="doSignup()">Buat Akun</a>
   </p>
-  </ion-card>
+ 
 
 </ion-content>

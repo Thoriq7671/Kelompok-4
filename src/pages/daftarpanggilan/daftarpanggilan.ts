@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
-import { AngularFireDatabase, FirebaseListObservable  } from 'angularfire2/database';
-//import { Tab1Page } from '../pages/tab1/tab1';
+import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { LaporItem } from '../../models/lapor-sampah/lapor-sampah.interface';
-import { EditdaftarlaporPage } from '../editdaftarlapor/editdaftarlapor';
+import { EditdaftarpanggilanPage } from '../editdaftarpanggilan/editdaftarpanggilan';
+
 /**
- * Generated class for the DaftarlaporPage page.
+ * Generated class for the DaftarpanggilanPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,28 +13,28 @@ import { EditdaftarlaporPage } from '../editdaftarlapor/editdaftarlapor';
 
 @IonicPage()
 @Component({
-  selector: 'page-daftarlapor',
-  templateUrl: 'daftarlapor.html',
+  selector: 'page-daftarpanggilan',
+  templateUrl: 'daftarpanggilan.html',
 })
-export class DaftarlaporPage {
-  laporItemRef$: FirebaseListObservable<LaporItem[]>
+export class DaftarpanggilanPage {
+  panggilItemRef$: FirebaseListObservable<LaporItem[]>
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase, private actionSheetCtrl: ActionSheetController ) {
 
-    this.laporItemRef$ = this.database.list('daftarlapor');
+    this.panggilItemRef$ = this.database.list('daftarpanggilan');
 
   }
 
-  selectLaporItem(laporItem: LaporItem){
+  selectPanggilItem(panggilItem: LaporItem){
     this.actionSheetCtrl.create({
-      title: `${laporItem.Nama}`,
+      title: `${panggilItem.Nama}`,
       buttons: [
         {
           text: 'Edit',
           handler: () => {
             // to edit
-            this.navCtrl.push(EditdaftarlaporPage, {laporItemId: laporItem.$key});
+             this.navCtrl.push(EditdaftarpanggilanPage, {panggilItemId: panggilItem.$key});
           }
         },
         {
@@ -42,7 +42,7 @@ export class DaftarlaporPage {
           role: 'destructive',
           handler: () => {
             // to delete
-            this.laporItemRef$.remove(laporItem.$key);
+            this.panggilItemRef$.remove(panggilItem.$key);
           }
         },
         // {
@@ -58,7 +58,7 @@ export class DaftarlaporPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DaftarlaporPage');
+    console.log('ionViewDidLoad DaftarpanggilanPage');
   }
 
 }

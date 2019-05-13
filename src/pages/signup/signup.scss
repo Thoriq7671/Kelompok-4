@@ -1,4 +1,11 @@
 page-signup {
+
+    .bg-image {
+        background-image: url('../assets/img/background.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
     ion-content {
         background-image: url("/src/assets/logoswms.png");
         background-size: cover;

@@ -2,8 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { DaftarlaporPage } from '../daftarlapor/daftarlapor';
 import { TabsPage } from '../tabs/tabs';
+
+import { AngularFireDatabase } from 'angularfire2/database';
+
+
+
 /**
  * Generated class for the SignupPage page.
  *
@@ -21,8 +25,16 @@ export class SignupPage {
   @ViewChild('username') uname;
   @ViewChild('password') password;  
 
-  constructor(private alertCtrl: AlertController, private fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private afAuth: AngularFireAuth, private afDatabase: AngularFireDatabase, private database: AngularFireDatabase, private alertCtrl: AlertController, private fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
+    // this.profileItemRef$ = this.database.list('profile');
   }
+
+  // createProfile(){
+  //   this.afAuth.authState.subscribe(auth => {
+  //     this.afDatabase.list(`signup/${auth.uid}`).push(this.profile)
+  //     .then(() => this.navCtrl.push('ProfilePage'))
+  //   })
+  // }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
@@ -37,6 +49,10 @@ export class SignupPage {
 }
 
   doLogin(){
+    // this.afAuth.authState.take(1).subscribe(auth => {
+    //   this.afDatabase.object(`signup/${auth.uid}`).set(this.profile)
+    //    //.then(() => this.navCtrl.setRoot('ProfilePage'))
+    // })
     if(this.uname.value == "petugas" && this.password.value == "petugas123"){
       this.fire.auth.createUserWithEmailAndPassword(this.uname.value + '@gmail.com', this.password.value)
       .then(data => {
@@ -46,6 +62,7 @@ export class SignupPage {
     })
     }
     else{
+      
     this.fire.auth.createUserWithEmailAndPassword(this.uname.value, this.password.value)
     .then(data => {
       console.log('got data ', data);
@@ -58,6 +75,7 @@ export class SignupPage {
     });
     console.log('Would register user with ', this.uname.value, this.password.value);
   }
+  
 }
    
   }

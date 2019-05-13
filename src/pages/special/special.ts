@@ -24,6 +24,10 @@ export class SpecialPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  // goProfile(){
+  //   this.navCtrl.push(ProfilePage);
+  // }
+
   doSignout(){
     this.navCtrl.setRoot(LoginPage);
   }

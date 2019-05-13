@@ -28,6 +28,9 @@ import { DaftarlaporPage } from '../pages/daftarlapor/daftarlapor';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
+import { EditdaftarlaporPage } from '../pages/editdaftarlapor/editdaftarlapor';
+import { DaftarpanggilanPage } from '../pages/daftarpanggilan/daftarpanggilan';
+import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftarpanggilan';
 
 
 // const firebaseAuth = {
@@ -57,6 +60,9 @@ import { PengaturanPage } from '../pages/pengaturan/pengaturan';
     //Done2Page,
     DaftarlaporPage,
     PengaturanPage,
+    EditdaftarlaporPage,
+    DaftarpanggilanPage,
+    EditdaftarpanggilanPage
 
   ],
   imports: [
@@ -65,7 +71,7 @@ import { PengaturanPage } from '../pages/pengaturan/pengaturan';
     HttpModule,
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -83,7 +89,10 @@ import { PengaturanPage } from '../pages/pengaturan/pengaturan';
     //Done1Page,
     //Done2Page,
     DaftarlaporPage,
-    PengaturanPage
+    PengaturanPage,
+    EditdaftarlaporPage,
+    DaftarpanggilanPage,
+    EditdaftarpanggilanPage
   ],
   providers: [
     StatusBar,
