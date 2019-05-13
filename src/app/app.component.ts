@@ -8,6 +8,7 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { LoginPage } from '../pages/login/login';
 //import { SignupPage } from '../pages/signup/signup';
 //import { HomePage } from '../pages/home/home';
+//import { Register } from '../pages/register/register';
 import { Tab1Page } from '../pages/tab1/tab1';
 import { Tab2Page } from '../pages/tab2/tab2';
 import { SpecialPage } from '../pages/special/special';

@@ -43,6 +43,7 @@ export class Tab1Page {
       Lokasi: this.laporItem.Lokasi,
       Keterangan: this.laporItem.Keterangan
     });
+    //console.log(laporItem);
     this.laporItem = {} as LaporItem;
     this.navCtrl.setRoot('Done1Page');
   }

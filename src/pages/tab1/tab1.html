@@ -9,12 +9,12 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <!-- <ion-title>SWMS</ion-title> -->
+      <ion-title>SWMS</ion-title>
       <ion-title>Lapor Sampah</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content padding class="bg-image">
+<ion-content padding>
     <!-- <ion-list [hidden]="autocompleteItems.length == 0">
         <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
           {{ item.description }}
@@ -62,7 +62,7 @@
             
             <ion-grid>
               <ion-row>
-                <ion-col style="text-align: center"><button ion-button block (click)="doLapor(laporItem)">Lapor</button></ion-col>
+                <ion-col style="text-align: center"><button ion-button (click)="doLapor(laporItem)">Lapor</button></ion-col>
               </ion-row>
             </ion-grid>
                 

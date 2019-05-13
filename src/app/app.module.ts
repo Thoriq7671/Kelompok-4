@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FIREBASE_CREDENTIALS } from './firebase.credentials';
 
+
 //import { Geolocation } from '@ionic-native/geolocation';
 
 
@@ -17,6 +18,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
+import { RegisterPage } from '../pages/register/register';
 import { Tab1Page } from '../pages/tab1/tab1';
 import { Tab2Page } from '../pages/tab2/tab2';
 import { SpecialPage } from '../pages/special/special';
@@ -28,10 +30,9 @@ import { DaftarlaporPage } from '../pages/daftarlapor/daftarlapor';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
-import { EditdaftarlaporPage } from '../pages/editdaftarlapor/editdaftarlapor';
-import { DaftarpanggilanPage } from '../pages/daftarpanggilan/daftarpanggilan';
-import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftarpanggilan';
-
+import { ProfilePage } from '../pages/profil/profil';
+import { EditProfilePage } from '../pages/editprofil/editprofil';
+//import { Subscription } from 'rxjs/Subscription';
 
 // const firebaseAuth = {
 //   apiKey: "AIzaSyBs0IMZvD4iPdh7fiAocL3KlFRgBp1xcwM",
@@ -54,24 +55,25 @@ import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftar
     HomePage,
     Tab1Page,
     Tab2Page,
+    ProfilePage,
+    EditProfilePage,
     SpecialPage,
     TabsPage,
+    RegisterPage,
     //Done1Page,
     //Done2Page,
     DaftarlaporPage,
     PengaturanPage,
-    EditdaftarlaporPage,
-    DaftarpanggilanPage,
-    EditdaftarpanggilanPage
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
+    //Subscription,
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
     AngularFireAuthModule,
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -81,7 +83,10 @@ import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftar
     ListPage,
     LoginPage,
     SignupPage,
+    RegisterPage,
     HomePage,
+    ProfilePage,
+    EditProfilePage,
     Tab1Page,
     Tab2Page,
     SpecialPage,
@@ -89,12 +94,10 @@ import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftar
     //Done1Page,
     //Done2Page,
     DaftarlaporPage,
-    PengaturanPage,
-    EditdaftarlaporPage,
-    DaftarpanggilanPage,
-    EditdaftarpanggilanPage
+    PengaturanPage
   ],
   providers: [
+   
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
