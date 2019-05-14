@@ -31,6 +31,10 @@ import { PengaturanPage } from '../pages/pengaturan/pengaturan';
 import { EditdaftarlaporPage } from '../pages/editdaftarlapor/editdaftarlapor';
 import { DaftarpanggilanPage } from '../pages/daftarpanggilan/daftarpanggilan';
 import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftarpanggilan';
+import { EditProfilePage } from '../pages/editprofil/editprofil';
+import { ProfilePage } from '../pages/profil/profil';
+import { RegisterPage } from '../pages/register/register';
+
 
 
 // const firebaseAuth = {
@@ -58,6 +62,9 @@ import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftar
     TabsPage,
     //Done1Page,
     //Done2Page,
+    ProfilePage,
+    EditProfilePage,
+    RegisterPage,
     DaftarlaporPage,
     PengaturanPage,
     EditdaftarlaporPage,
@@ -90,6 +97,9 @@ import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftar
     //Done2Page,
     DaftarlaporPage,
     PengaturanPage,
+    ProfilePage,
+    EditProfilePage,
+    RegisterPage,
     EditdaftarlaporPage,
     DaftarpanggilanPage,
     EditdaftarpanggilanPage

@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { HomePage } from '../home/home';
+//import { HomePage } from '../home/home';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { TabsPage } from '../tabs/tabs';
-
+import { RegisterPage } from '../register/register';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 
@@ -67,7 +67,7 @@ export class SignupPage {
     .then(data => {
       console.log('got data ', data);
       this.alert('Berhasil terdaftar!');
-      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.setRoot(RegisterPage);
     })
     .catch(error => {
       console.log('got an error ', error);

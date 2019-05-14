@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-
+import { ProfilePage } from '../profil/profil';
 /**
  * Generated class for the SpecialPage page.
  *
@@ -24,9 +24,9 @@ export class SpecialPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  // goProfile(){
-  //   this.navCtrl.push(ProfilePage);
-  // }
+  ViewProfile() {
+    this.navCtrl.push(ProfilePage);
+  }
 
   doSignout(){
     this.navCtrl.setRoot(LoginPage);
