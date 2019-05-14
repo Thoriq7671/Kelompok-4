@@ -26,7 +26,11 @@ export class RegisterPage {
 
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams,  private database: AngularFireDatabase) {
 
+<<<<<<< HEAD
   this.dataDiriItemRef$ = this.database.list('profil');
+=======
+  this.dataDiriItemRef$ = this.database.list('profilee');
+>>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
    }
 
    alert(message: string) {

@@ -14,7 +14,11 @@
     </ion-navbar>
 </ion-header>
 
+<<<<<<< HEAD
 <ion-content padding class="bg-image">
+=======
+<ion-content padding>
+>>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
     <!-- <ion-list [hidden]="autocompleteItems.length == 0">
         <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
           {{ item.description }}
@@ -38,6 +42,7 @@
       <ion-item>
           <ion-icon name="call" item-left></ion-icon>
           <ion-label color="primary" stacked> Nomor Telepon</ion-label>
+<<<<<<< HEAD
           <ion-input type="string" placeholder="Nomor Telepon" [(ngModel)]="dataDiriItem.Phone"></ion-input>
         </ion-item>
 
@@ -45,6 +50,15 @@
           <ion-icon name="home" item-left></ion-icon>
           <ion-label color="primary" stacked> Alamat</ion-label>
           <ion-input  type="text" placeholder="Alamat" [(ngModel)]="dataDiriItem.Alamat"></ion-input>
+=======
+          <ion-input type="text" placeholder="Nomor Telepon" [(ngModel)]="dataDiriItem.Phone"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="address" item-left></ion-icon>
+          <ion-label color="primary" stacked> Alamat</ion-label>
+          <ion-input type="text" placeholder="Alamat" [(ngModel)]="dataDiriItem.Alamat"></ion-input>
+>>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
       </ion-item>
 
             <!-- <ion-item>
@@ -56,7 +70,11 @@
             
             <ion-grid>
               <ion-row>
+<<<<<<< HEAD
                 <ion-col style="text-align: center"><button block ion-button (click)="doRegister(dataDiriItem)">Daftar</button></ion-col>
+=======
+                <ion-col style="text-align: center"><button ion-button (click)="doRegister(dataDiriItem)">Daftar</button></ion-col>
+>>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
               </ion-row>
             </ion-grid>
                 

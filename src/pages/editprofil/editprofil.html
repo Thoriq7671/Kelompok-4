@@ -5,6 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+<<<<<<< HEAD
     <ion-navbar color="primary">
       <ion-title>Edit Profile</ion-title>
     </ion-navbar>
@@ -30,3 +31,29 @@
     <button ion-button (click)="EditProfile(dataDiriItem)">Done</button>
   </ion-content>
   
+=======
+  <ion-navbar color="primary">
+    <ion-title>Edit Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Nama</ion-label>
+    <ion-input type="text" [(ngModel)]="dataDiriItem.Nama"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Nomor Telepon</ion-label>
+    <ion-input type="number" [(ngModel)]="dataDiriItem.Phone"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Alamat</ion-label>
+    <ion-input type="text" [(ngModel)]="dataDiriItem.Alamat"></ion-input>
+  </ion-item>
+
+  <button ion-button (click)="EditProfile(dataDiriItem)">Done</button>
+</ion-content>
+>>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
 import { AngularFireAuth } from 'angularfire2/auth';
+//import { DaftarlaporPage } from '../daftarlapor/daftarlapor';
 import { TabsPage } from '../tabs/tabs';
 
 /**
@@ -20,8 +21,7 @@ import { TabsPage } from '../tabs/tabs';
 export class LoginPage {
   @ViewChild('username') uname;
   @ViewChild('password') password;
-  @ViewChild('petugas') petugas;
- 
+
   // public user : string;
   // public password : string;
 
@@ -41,7 +41,7 @@ export class LoginPage {
   }
 
   doLogin() {
-    if(this.uname.value == "petugas" && this.password.value == "petugas123" ){
+    if(this.uname.value == "petugas" && this.password.value == "petugas123"){
       this.fire.auth.signInWithEmailAndPassword(this.uname.value + '@gmail.com', this.password.value)
       .then(data => {
         console.log('got data ', data);

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-// import { TabsPage } from '../tabs/tabs';
+//import { TabsPage } from '../tabs/tabs';
+import { ProfilePage } from '../profil/profil';
 
 /**
  * Generated class for the PengaturanPage page.
@@ -23,11 +24,21 @@ export class PengaturanPage {
     console.log("Selected Item", item);
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public app:App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ViewProfile(){
+    // close the menu when clicking a link from the menu
+    //this.menu.close(TabsPage);
+    // navigate to the new page if it is not the current page
+    this.navCtrl.setRoot(ProfilePage);
   }
 
   doSignout(){
-    this.app.getRootNav().setRoot(LoginPage);
+    // close the menu when clicking a link from the menu
+    //this.menu.close(TabsPage);
+    // navigate to the new page if it is not the current page
+    this.navCtrl.setRoot(LoginPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad PengaturanPage');

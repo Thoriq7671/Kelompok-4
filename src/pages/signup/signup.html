@@ -7,29 +7,29 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-         Smart Waste Management System
+            SWMS <br/> Smart Waste Management System
           </ion-title>
       </ion-navbar>
 </ion-header>
 
-<ion-content padding class="bg-image">
+<ion-content>
   <ion-list></ion-list>
  <img src ="../assets/logoswms.png"/>
   <ion-infinite-scroll threshold="100px" id="infinite-scroll"></ion-infinite-scroll>
- 
+  <ion-card>
 <!-- <ion-item>
   <ion-label color = "primary" position="stacked">Nama</ion-label>
-  <ion-input  placeholder="Masukan nama" [(ngModel)]="profile.Nama"></ion-input>
+  <ion-input  placeholder="Masukan nama" ></ion-input>
 </ion-item>
 
 <ion-item>
-      <ion-label color = "primary" position="stacked">Nomor Telepon</ion-label>
-      <ion-input  placeholder="Masukan nomor telepon" [(ngModel)]="profile.Phone" ></ion-input>
+    <ion-label color = "primary" position="stacked">Email</ion-label>
+    <ion-input  placeholder="Masukan email" ></ion-input>
   </ion-item>
 
-  <ion-item>
-      <ion-label color = "primary" position="stacked">Alamat</ion-label>
-      <ion-input  placeholder="Masukan alamat" [(ngModel)]="profile.Alamat"></ion-input>
+<ion-item>
+      <ion-label color = "primary" position="stacked">Nomor Telepon</ion-label>
+      <ion-input  placeholder="Masukan nomor telepon" ></ion-input>
   </ion-item> -->
 
   <ion-item>
@@ -48,5 +48,5 @@
   </ion-item> -->
 
   <button block ion-button shape = round size= small expand="full" (click)="doLogin()">Masuk</button>
-
+</ion-card>
 </ion-content>

@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { ProfilePage } from '../profil/profil';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
 /**
  * Generated class for the SpecialPage page.
  *
