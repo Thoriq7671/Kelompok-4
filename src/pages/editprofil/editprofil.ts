@@ -34,11 +34,7 @@ export class EditProfilePage {
     console.log(dataDiriId);
 
     //set the scope of out Firebase object equal to our selected item
-<<<<<<< HEAD
     this.dataDiriItemRef$ = this.database.object(`profil/${dataDiriId}`);
-=======
-    this.dataDiriItemRef$ = this.database.object(`profilee/${dataDiriId}`);
->>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
 
     //subscribe to the object and assign the result to this.dataDiriItem
 

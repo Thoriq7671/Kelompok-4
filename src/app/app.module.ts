@@ -30,20 +30,13 @@ import { DaftarlaporPage } from '../pages/daftarlapor/daftarlapor';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
-<<<<<<< HEAD
 import { EditdaftarlaporPage } from '../pages/editdaftarlapor/editdaftarlapor';
 import { DaftarpanggilanPage } from '../pages/daftarpanggilan/daftarpanggilan';
 import { EditdaftarpanggilanPage } from '../pages/editdaftarpanggilan/editdaftarpanggilan';
 import { EditProfilePage } from '../pages/editprofil/editprofil';
 import { ProfilePage } from '../pages/profil/profil';
-import { RegisterPage } from '../pages/register/register';
 
 
-=======
-import { ProfilePage } from '../pages/profil/profil';
-import { EditProfilePage } from '../pages/editprofil/editprofil';
-//import { Subscription } from 'rxjs/Subscription';
->>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
 
 // const firebaseAuth = {
 //   apiKey: "AIzaSyBs0IMZvD4iPdh7fiAocL3KlFRgBp1xcwM",
@@ -78,6 +71,9 @@ import { EditProfilePage } from '../pages/editprofil/editprofil';
     RegisterPage,
     DaftarlaporPage,
     PengaturanPage,
+    EditdaftarlaporPage,
+    DaftarpanggilanPage,
+    EditdaftarpanggilanPage
 
   ],
   imports: [
@@ -108,7 +104,6 @@ import { EditProfilePage } from '../pages/editprofil/editprofil';
     //Done1Page,
     //Done2Page,
     DaftarlaporPage,
-<<<<<<< HEAD
     PengaturanPage,
     ProfilePage,
     EditProfilePage,
@@ -116,9 +111,6 @@ import { EditProfilePage } from '../pages/editprofil/editprofil';
     EditdaftarlaporPage,
     DaftarpanggilanPage,
     EditdaftarpanggilanPage
-=======
-    PengaturanPage
->>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
   ],
   providers: [
    

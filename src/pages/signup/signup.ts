@@ -5,13 +5,10 @@ import { AngularFireAuth } from 'angularfire2/auth';
 //import { DaftarlaporPage } from '../daftarlapor/daftarlapor';
 import { TabsPage } from '../tabs/tabs';
 import { RegisterPage } from '../register/register';
-<<<<<<< HEAD
 import { AngularFireDatabase } from 'angularfire2/database';
 
 
 
-=======
->>>>>>> 68d39b28e5234c7be2c1f13c2edfa0c0411de686
 /**
  * Generated class for the SignupPage page.
  *

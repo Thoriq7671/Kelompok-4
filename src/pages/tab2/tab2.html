@@ -14,30 +14,30 @@
     </ion-navbar>
   </ion-header>
 
-<ion-content padding>
+<ion-content padding class="bg-image">
     <ion-infinite-scroll threshold="100px" id="infinite-scroll"></ion-infinite-scroll>
       <ion-item> 
         <ion-icon name="person" item-left></ion-icon>
         <ion-label color="primary" stacked> Nama</ion-label>
-        <ion-input type="name" placeholder="Masukan nama"></ion-input>
+        <ion-input type="name" placeholder="Masukan nama"  [(ngModel)]="panggilItem.Nama"></ion-input>
       </ion-item>
    
       <ion-item>
           <ion-icon name="call" item-left></ion-icon>
           <ion-label color="primary" stacked> Nomor telepon</ion-label>
-          <ion-input type="call" placeholder="Masukan nomor telepon"></ion-input>
+          <ion-input type="call" placeholder="Masukan nomor telepon"  [(ngModel)]="panggilItem.Phone"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-icon name="pin" item-left></ion-icon>
             <ion-label color="primary" stacked> Lokasi yang ingin dibersihkan</ion-label>
-            <ion-input type="locate" placeholder="Cari lokasi tujuan"></ion-input>
+            <ion-input type="locate" placeholder="Cari lokasi tujuan"  [(ngModel)]="panggilItem.Lokasi"></ion-input>
           </ion-item>
 
           <ion-item>
               <ion-icon name="information-circle" item-left></ion-icon>
               <ion-label color="primary" stacked> Keterangan</ion-label>
-              <ion-input type="locate" placeholder="Masukan keterangan"></ion-input>
+              <ion-input type="locate" placeholder="Masukan keterangan"  [(ngModel)]="panggilItem.Keterangan"></ion-input>
             </ion-item>
 
             

@@ -1,4 +1,10 @@
 page-done1 {
+    .bg-image {
+        background-image: url('../assets/img/background.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
     ion-icon{
         font-size: 200px;
         
